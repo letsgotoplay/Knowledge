@@ -36,6 +36,38 @@ Interesting Features:
 - Flight Recorder
 - HTTP Client (default)
 - Local Variable Syntax for Lambda Parameters
+  - 用var来定义本地变量 和lambda一起 省不少时间
+  ```java
+  //before Java 10
+  String text = "Hello Java 9";
+  //Java 11
+  var text = "Hello Java 11";
+  var text = "Hello Java 11";
+  text = 23;  // Incompatible types
+  final var text = "Banana";
+  text = "Joe";   // Cannot assign a value to final variable 'text'
+
+  // Cannot infer type:
+  var a; // Cannot infer type
+  var nothing = null; // Cannot infer type
+  var lambda = () -> System.out.println("Pity!"); // Cannot infer type
+  var method = this::someMethod; // Cannot infer type
+
+  // eaier
+  var myList = new ArrayList<Map<String, List<Integer>>>();
+
+  for (var current : myList) {
+      // current is infered to type: Map<String, List<Integer>>
+      System.out.println(current);
+  }
+    // Inference of lambda parameters
+	Consumer<String> printer = (var s) -> System.out.println(s); 
+	// but no mix of "var" and declared types possible
+	// BiConsumer<String, String> printer = (var s1, String s2) -> System.out.println(s1 + " " + s2);
+	// Useful for Type Annotations
+	BiConsumer<String, String> printer = (@Nonnull var s1, @Nullable var s2) -> System.out.println(s1 + (s2 == null ? "" : " " + s2));
+  ```
+
 - Launch Single-File Source Code Programs
   - Java 文件可以直接启动 或者用类似shell 脚本启动
   ```bash
@@ -43,6 +75,9 @@ Interesting Features:
   // instead of
   # javac HelloWorld.java
   # java -cp . hello.World
+  // or declare 
+  #!/path/to/java --source version
+  # ./HelloWorld.java
   ```
 
 
