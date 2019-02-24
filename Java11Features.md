@@ -31,10 +31,36 @@
 Interesting Features:
 
 - Epsilon: A No-Op Garbage Collector
+  - mainly for researcher,performance tester to set JVM without any GC.
+  - Also interestly how we can do a [application without need of GC like Log4J](https://www.infoq.com/news/2016/05/log4j-garbage-free)
 - ZGC: A Scalable Low-Latency Garbage Collector 
 (Experimental)
+- G1: pararell GC
 - Flight Recorder
+  - [record-java-application-events](https://openjdk.java.net/jeps/328)
 - HTTP Client (default)
+  - 新的http-client 跟像其他语言的api了
+  ```java
+  // two ways of new http client, sync way as default, or use async API
+  var request = HttpRequest.newBuilder()
+    .uri(URI.create("https://www.example.com"))
+    .GET()
+    .build();
+  var client = HttpClient.newHttpClient();
+  HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+  System.out.println(response.body());
+
+  // or use Async way
+  var request = HttpRequest.newBuilder()
+    .uri(URI.create("https://winterbe.com"))
+    .build(); // We can omit the .GET() call as it's the default request method.
+  var client = HttpClient.newHttpClient();
+  client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+      .thenApply(HttpResponse::body)
+      .thenAccept(System.out::println);
+
+  // and other calls like post() in request and build a basic auth while build http client. go check API
+  ```
 - Local Variable Syntax for Lambda Parameters
   - 用var来定义本地变量 和lambda一起 省不少时间
   ```java
@@ -79,8 +105,50 @@ Interesting Features:
   #!/path/to/java --source version
   # ./HelloWorld.java
   ```
+- new APIs
+ ```java
+    // Immutable List Creation
+	var list = List.of("A", "B", "C");
+	var copy = List.copyOf(list);
+	System.out.println(list == copy);   // true
 
+	//map
+	var map = Map.of("A", 1, "B", 2);
+    System.out.println(map);    // {B=2, A=1}
+    
+    // Stream
+    Stream.ofNullable(null).count();
+    Stream.of(1, 2, 3, 2, 1)
+    .dropWhile(n -> n < 3)
+    .collect(Collectors.toList());  // [3, 2, 1]
 
+    Stream.of(1, 2, 3, 2, 1)
+    .takeWhile(n -> n < 3)
+    .collect(Collectors.toList());  // [1, 2]
+    //optinal of && ofNullable
+    Optional.of("foo").orElseThrow();     // foo
+    Optional.of("foo").stream().count();  // 1
+    Optional.ofNullable(null)
+    .or(() -> Optional.of("fallback"))
+    .get();                           // fallback
+
+   //String 
+   " ".isBlank();                // true
+   " Foo Bar ".strip();          // "Foo Bar"
+   " Foo Bar ".stripTrailing();  // " Foo Bar"
+   " Foo Bar ".stripLeading();   // "Foo Bar "
+   "Java".repeat(3);             // "JavaJavaJava"
+   "A\nB\nC".lines().count();    // 3
+
+   //InputStreams tranferTo()
+   var classLoader = ClassLoader.getSystemClassLoader();
+   var inputStream = classLoader.getResourceAsStream("myFile.txt");
+   var tempFile = File.createTempFile("myFileCopy", "txt");
+   try (var outputStream = new FileOutputStream(tempFile)) {
+       inputStream.transferTo(outputStream);
+   }
+
+ ``` 
 
 ## Future
 现在已经有了jdk13的beta，主要的新功能如下：
@@ -100,3 +168,4 @@ Interesting Features:
 - [java-12-intersting-features](https://dzone.com/articles/interesting-jdk-12-features-to-watch-out-for)
 - [java-11-new-features](https://codingcompiler.com/17-new-features-in-java-11-jdk-11-features/)
 - [java-no-gc](https://www.infoq.com/news/2017/03/java-epsilon-gc)
+- [java-11-tutorial](https://winterbe.com/posts/2018/09/24/java-11-tutorial/)
