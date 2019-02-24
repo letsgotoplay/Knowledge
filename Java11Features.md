@@ -8,27 +8,43 @@
 ## Java11 Features
 
 - Nest-Based Access Control
+  - JVM update
 - Dynamic Class File Constants
+  - Compiler update
 - Improve Aarch64 Intrinsics
-- Epsilon: A No-Op Garbage Collector
+  - Improving the existing string and array intrinsics for AArch64 cpu processors 
 - Remove the Java EE and CORBA Modules
+  - mini size from SE version
 - Key Agreement with Curve25519 and Curve448
+  - Implementation of the cryptographic graphics schemes
 - Unicode 10
+  - Updated the existing platform APIs to version 10.0 
 - Deprecate the Rhino JavaScript Engine
 - Deprecate the Pack200 Tools and API
 - Transport Layer Security (TLS) 1.3
    - TLS1.3 standard implementation
 - Low overhead heap profiling
+  - JVMTI tool spport upgrade
 - ChaCha20 and Poly1305 Cryptographic Algorithms
+  - Implementation of a stream encryption 
 
 Interesting Features:
 
+- Epsilon: A No-Op Garbage Collector
+- ZGC: A Scalable Low-Latency Garbage Collector 
+(Experimental)
 - Flight Recorder
 - HTTP Client (default)
 - Local Variable Syntax for Lambda Parameters
 - Launch Single-File Source Code Programs
-- ZGC: A Scalable Low-Latency Garbage Collector 
-(Experimental)
+  - Java 文件可以直接启动 或者用类似shell 脚本启动
+  ```bash
+  # java HelloWorld.java
+  // instead of
+  # javac HelloWorld.java
+  # java -cp . hello.World
+  ```
+
 
 
 ## Future
