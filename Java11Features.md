@@ -17,7 +17,7 @@
 - Deprecate the Rhino JavaScript Engine
 - Deprecate the Pack200 Tools and API
 - Transport Layer Security (TLS) 1.3
-   ++ TLS1.3 standard implementation
+   - TLS1.3 standard implementation
 - Low overhead heap profiling
 - ChaCha20 and Poly1305 Cryptographic Algorithms
 
@@ -48,3 +48,4 @@ Interesting Features:
 - [java-se-support-roadmap](https://www.oracle.com/technetwork/java/java-se-support-roadmap.html)
 - [java-12-intersting-features](https://dzone.com/articles/interesting-jdk-12-features-to-watch-out-for)
 - [java-11-new-features](https://codingcompiler.com/17-new-features-in-java-11-jdk-11-features/)
+- [java-no-gc](https://www.infoq.com/news/2017/03/java-epsilon-gc)
