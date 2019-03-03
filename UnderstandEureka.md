@@ -58,7 +58,7 @@ curl -X "POST" "http://localhost:8895/test/actuator/service-registry?status=DOWN
    -H "Content-Type: application/vnd.spring-boot.actuator.v2+json;charset=UTF-8"
 ```
 
-##小结
+## 小结
 
 简单但是没有consul好使。
 
