@@ -31,8 +31,9 @@
 > 统一ide: eclipse
 > eclipse extra plugin: gradle,json editor
 > eclipse setting:  preference -> java/javascript -> editor -> save actions -> perform selected action on save
-![Logo][1]
+<img src="https://github.com/letsgotoplay/Knowledege/blob/master/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png" alt='test' width='200'>
 
+![Logo][1]
 [1]: https://github.com/letsgotoplay/Knowledege/blob/master/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png
 
 
