@@ -11,7 +11,7 @@
 - Naming
   - 简单易懂帮助别人和自己理解，如java 默认naming规则
 - API
-  - 参考mvc rest api 规范
+  - 参考spring naming/rest api 规范
 - 编码
   - 码代码的习惯风格，防止bug，文档&注释，复杂度，测试 
 - Exception Handling
@@ -31,10 +31,9 @@
 > 统一ide: eclipse
 > eclipse extra plugin: gradle,json editor
 > eclipse setting:  preference -> java/javascript -> editor -> save actions -> perform selected action on save
-<img src="https://github.com/letsgotoplay/Knowledege/blob/master/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png" alt='test' width='200'>
+<img src="/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png" alt='test' width='600'>
 
-![Logo][1]
-[1]: https://github.com/letsgotoplay/Knowledege/blob/master/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png
+
 
 
 
