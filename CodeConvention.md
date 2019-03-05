@@ -31,7 +31,25 @@
 > 统一ide: eclipse
 > eclipse extra plugin: gradle,json editor
 > eclipse setting:  preference -> java/javascript -> editor -> save actions -> perform selected action on save
-<img src="/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png" alt='test' width='600'>
+<img src="/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png" alt='checkAllOptions' width='600'>
+当你每次save一个文件时，自动删除没用的import/载入import class，自动format改动的代码，自动cast，自动annotate
+- Commit 
+> [google commit convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
+```txt
+<type>(<scope>): <subject>
+// 空一行
+<body>
+// 空一行
+<footer>
+
+例如:
+refactor(sample.css): clean up css
+
+modified .button to be more general style
+
+important style change
+```
+除了好看有意义意外，有什么好处呢？ 可以根据type 直接按种类生成release's changelog。以此推广在公司环境下在type前加一个jira id, 完美。	 
 
 
 
