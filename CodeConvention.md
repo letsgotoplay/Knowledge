@@ -34,7 +34,7 @@
 <img src="/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png" alt='checkAllOptions' width='600'>
 当你每次save一个文件时，自动删除没用的import/载入import class，自动format改动的代码，自动cast，自动annotate
 - Commit 
-> [google commit convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
+> 参考[google commit convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines), [convetion commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/#specification)
 ```txt
 <type>(<scope>): <subject>
 // 空一行
@@ -50,28 +50,17 @@ modified .button to be more general style
 important style change
 ```
 除了好看有意义意外，有什么好处呢？ 可以根据type 直接按种类生成release's changelog。以此推广在公司环境下在type前加一个jira id, 完美。	 
+有什么工具可以辅助一下吗？ 有， [cli工具](https://commitizen.github.io/cz-cli/),安装完如下：
+<img src="/resources/pics/Screen%20Shot%202019-03-05%20at%2010.10.18%20AM.png" alt='commitTool' width='600'>
 
 
 
 
 
 
-
-
-commit tools:
-https://commitizen.github.io/cz-cli/
-
-https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
 
 https://github.com/conventional-changelog/conventional-changelog
 
-https://egghead.io/series/how-to-write-an-open-source-javascript-library
-https://egghead.io/articles/get-started-contributing-to-javascript-open-source
-
-
-https://www.conventionalcommits.org/en/v1.0.0-beta.3/#specification
-
-https://github.com/conventional-changelog/conventional-changelog
 
 
 Logger规范
@@ -82,3 +71,5 @@ api 接口规范
 [API_Design_Principles](https://wiki.qt.io/API_Design_Principles)
 [Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 [如何成为优秀的技术主管？你要做到这三点](https://baijiahao.baidu.com/s?id=1626542538622659949)
+[how-to-write-an-open-source-javascript-library](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
+[get-started-contributing-to-javascript-open-source](https://egghead.io/articles/get-started-contributing-to-javascript-open-source)
