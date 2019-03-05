@@ -32,9 +32,11 @@
 > eclipse extra plugin: gradle,json editor
 > eclipse setting:  preference -> java/javascript -> editor -> save actions -> perform selected action on save
 <img src="/resources/pics/Screen%20Shot%202019-03-05%20at%209.36.14%20AM.png" alt='checkAllOptions' width='600'>
-当你每次save一个文件时，自动删除没用的import/载入import class，自动format改动的代码，自动cast，自动annotate
+> 当你每次save一个文件时，自动删除没用的import/载入import class，自动format改动的代码，自动cast，自动annotate
+
 - Commit 
 > 参考[google commit convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines), [convetion commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/#specification)
+
 ```
 <type>(<scope>): <subject>
 // 空一行
