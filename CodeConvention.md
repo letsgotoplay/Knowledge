@@ -67,7 +67,7 @@ important style change
   正确的风格：
   author，nessesary comments notes
   逻辑区分方法。 utility 方法。
-  重点是defensive coding。参考做算法题的规范
+  重点是defensive coding。第一步不是想实现逻辑，而是防止可能出现的错误。参考做算法题的规范
 - Exception Handling
   1. 用 try with resource/ finally 释放资源
   2. 抛具体exception 而不是泛化exception。
@@ -86,9 +86,9 @@ important style change
 
 
 # References:
-[API_Design_Principles](https://wiki.qt.io/API_Design_Principles)
-[Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
-[如何成为优秀的技术主管？你要做到这三点](https://baijiahao.baidu.com/s?id=1626542538622659949)
-[how-to-write-an-open-source-javascript-library](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
-[get-started-contributing-to-javascript-open-source](https://egghead.io/articles/get-started-contributing-to-javascript-open-source)
-[conventional-changelog 工具](https://github.com/conventional-changelog/conventional-changelog)
+- [API_Design_Principles](https://wiki.qt.io/API_Design_Principles)
+- [Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+- [如何成为优秀的技术主管？你要做到这三点](https://baijiahao.baidu.com/s?id=1626542538622659949)
+- [how-to-write-an-open-source-javascript-library](https://egghead.io/series/how-to-write-an-open-source-javascript-library)
+- [get-started-contributing-to-javascript-open-source](https://egghead.io/articles/get-started-contributing-to-javascript-open-source)
+- [conventional-changelog 工具](https://github.com/conventional-changelog/conventional-changelog)
