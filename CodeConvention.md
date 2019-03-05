@@ -35,7 +35,7 @@
 当你每次save一个文件时，自动删除没用的import/载入import class，自动format改动的代码，自动cast，自动annotate
 - Commit 
 > 参考[google commit convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines), [convetion commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/#specification)
-```txt
+```
 <type>(<scope>): <subject>
 // 空一行
 <body>
@@ -49,6 +49,7 @@ modified .button to be more general style
 
 important style change
 ```
+
 除了好看有意义意外，有什么好处呢？ 可以根据type 直接按种类生成release's changelog。以此推广在公司环境下在type前加一个jira id, 完美。	 
 有什么工具可以辅助一下吗？ 有， [cli工具](https://commitizen.github.io/cz-cli/),安装完如下：
 <img src="/resources/pics/Screen%20Shot%202019-03-05%20at%2010.10.18%20AM.png" alt='commitTool' width='600'>
