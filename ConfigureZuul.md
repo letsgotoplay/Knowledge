@@ -12,20 +12,21 @@ It is worth to notice here that The Spring Cloud Gateway has some issues about p
 Now the latest version of Zuul is 2.X. But Spring would not integrate 2.X Zuul in Spring because of Spring Cloud Gateway product.Two versions are not compatible, Zuul 1.x is Blocking and Zuul 2.X is designed to support Async Non-blocking requests. and This article will introduce Zuul 1.X mostly
 ### How it works
 [How Zuul Works][2] (will try Zuul 2.X in future and netty)
+
 [Spring NetFlix Zuul][4]
 
 Netflix uses Zuul for the following:
 
-Authentication
-Insights
-Stress Testing
-Canary Testing
-Dynamic Routing
-Service Migration
-Load Shedding
-Security
-Static Response handling
-Active/Active traffic management
++ Authentication
++ Insights
++ Stress Testing
++ Canary Testing
++ Dynamic Routing
++ Service Migration
++ Load Shedding
++ Security
++ Static Response handling
++ Active/Active traffic management
 
 Filter Types-> pre/route/post 
 
@@ -41,16 +42,16 @@ Dont forget you can also register servlet filters. These filters will act before
 
 ### Configuration Overview 
 [Zuul Config][3]
-++ zuul.host.maxTotalConnections (200 default)
-++ zuul.host.maxPerRouteConnections (20 default)
-++ more memory more cores, the better
-++ Choice of Apache HTTP Client/OkHttpClient
-++ Default sensitiveHeaders: Cookie,Set-Cookie,Authorization that will be filter out when forwarding to downstreams. you need to set sensitiveHeaders to empty to skip this default action.
-++ It can forward request by service id, url and forward to local Zuul itself 
-++ /zuul path for extra large file stream
-++ To pass information between filters, Zuul uses a RequestContext. Its data is held in a ThreadLocal specific to each request.
-++ You can also disable default filters in config or provide fallback/timeout when routing.
-++ Config ribbon and hystrix to provide detailed behavior for fallback/timeout and config retry policy
+++zuul.host.maxTotalConnections (200 default)
+++zuul.host.maxPerRouteConnections (20 default)
+++more memory more cores, the better
+++Choice of Apache HTTP Client/OkHttpClient
+++Default sensitiveHeaders: Cookie,Set-Cookie,Authorization that will be filter out when forwarding to downstreams. you need to set sensitiveHeaders to empty to skip this default action.
+++It can forward request by service id, url and forward to local Zuul itself 
+++/zuul path for extra large file stream
+++To pass information between filters, Zuul uses a RequestContext. Its data is held in a ThreadLocal specific to each request.
+++You can also disable default filters in config or provide fallback/timeout when routing.
+++Config ribbon and hystrix to provide detailed behavior for fallback/timeout and config retry policy
 
 [1]:https://engineering.opsgenie.com/comparing-api-gateway-performances-nginx-vs-zuul-vs-spring-cloud-gateway-vs-linered-b2cc59c65369
 [2]:https://github.com/Netflix/zuul/wiki
