@@ -42,16 +42,16 @@ Dont forget you can also register servlet filters. These filters will act before
 
 ### Configuration Overview 
 [Zuul Config][3]
-++zuul.host.maxTotalConnections (200 default)
-++zuul.host.maxPerRouteConnections (20 default)
-++more memory more cores, the better
-++Choice of Apache HTTP Client/OkHttpClient
-++Default sensitiveHeaders: Cookie,Set-Cookie,Authorization that will be filter out when forwarding to downstreams. you need to set sensitiveHeaders to empty to skip this default action.
-++It can forward request by service id, url and forward to local Zuul itself 
-++/zuul path for extra large file stream
-++To pass information between filters, Zuul uses a RequestContext. Its data is held in a ThreadLocal specific to each request.
-++You can also disable default filters in config or provide fallback/timeout when routing.
-++Config ribbon and hystrix to provide detailed behavior for fallback/timeout and config retry policy
++zuul.host.maxTotalConnections (200 default)
++zuul.host.maxPerRouteConnections (20 default)
++more memory more cores, the better
++Choice of Apache HTTP Client/OkHttpClient
++Default sensitiveHeaders: Cookie,Set-Cookie,Authorization that will be filter out when forwarding to downstreams. you need to set sensitiveHeaders to empty to skip this default action.
++It can forward request by service id, url and forward to local Zuul itself 
++/zuul path for extra large file stream
++To pass information between filters, Zuul uses a RequestContext. Its data is held in a ThreadLocal specific to each request.
++You can also disable default filters in config or provide fallback/timeout when routing.
++Config ribbon and hystrix to provide detailed behavior for fallback/timeout and config retry policy
 
 [1]:https://engineering.opsgenie.com/comparing-api-gateway-performances-nginx-vs-zuul-vs-spring-cloud-gateway-vs-linered-b2cc59c65369
 [2]:https://github.com/Netflix/zuul/wiki
