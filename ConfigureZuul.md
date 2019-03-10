@@ -7,7 +7,8 @@ Ez to make downstream stateless to be more horizontally scalable.
 ## Compare Gateway Performance
 
 [Compare Nginx/Zuul/Spring-Cloud-Gateway][1]
-It is worth to notice here that The Spring Cloud Gateway has some issues about performance, and Zuul 1.X performs best under 8 core 16RAM server environment, even spring cloud gateway provides more configurable and easy ways to controll gateway's logic. Because Zuul1.X is kind of battle-tested, currently Spring Netflix Zuul is a little more in tech perferences.
+
+It is worth to notice here that The Spring Cloud Gateway has some issues about performance, and Zuul 1.X performs best under 8 core 16RAM server environment, even spring cloud gateway provides more configurable and easy ways to controll gateway's logic. Because Zuul1.X is kind of battle-tested, currently Spring Netflix Zuul is a little more favorable in tech perferences.
 ## Spring Netflix Zuul
 Now the latest version of Zuul is 2.X. But Spring would not integrate 2.X Zuul in Spring because of Spring Cloud Gateway product.Two versions are not compatible, Zuul 1.x is Blocking and Zuul 2.X is designed to support Async Non-blocking requests. and This article will introduce Zuul 1.X mostly
 ### How it works
@@ -32,9 +33,9 @@ Filter Types-> pre/route/post
 
 There some default filters added in Zuul, once you enabled the annotation @EnableZuulProxy.
 
-Dont forget you can also register servlet filters. These filters will act before zuul filters. the priority works as follows:
-1. servlet filters by order. After it enters spring filter it goes into ...
-2. spring filter chains then it goes into...
+Don't forget you can also register servlet filters. These filters will act before zuul filters. the **Order** works as follows:
+1. servlet filters by order. it enters into spring filter, then it goes into ...
+2. spring filter chains, then it goes into...
 3. servlet filters left, then it goes into...
 4. spring dispatch servlet, then it goes into...
 5. zuul filters
