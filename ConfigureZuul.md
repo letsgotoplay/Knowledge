@@ -16,6 +16,8 @@ Now the latest version of Zuul is 2.X. But Spring would not integrate 2.X Zuul i
 
 [Spring NetFlix Zuul][4]
 
+![zuul architect](https://camo.githubusercontent.com/4eb7754152028cdebd5c09d1c6f5acc7683f0094/687474703a2f2f6e6574666c69782e6769746875622e696f2f7a75756c2f696d616765732f7a75756c2d726571756573742d6c6966656379636c652e706e67)
+
 Netflix uses Zuul for the following:
 
 + Authentication
