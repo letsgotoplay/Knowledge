@@ -56,6 +56,23 @@ Don't forget you can also register servlet filters. These filters will act befor
 + You can also disable default filters in config or provide fallback/timeout when routing.
 + Config ribbon and hystrix to provide detailed behavior for fallback/timeout and config retry policy
 
+### Routing Example
+```
+ignoredPatterns: /**/admin/** #ignore route if url contains /admin/ part
+users:
+      path: /myusers/**  #forward route for user services start with /myusers/
+      serviceId: users
+local:
+      path: /local/**
+      url: forward:/local  # forward to zuul itself's url /local
+legacy:
+      sensitiveHeaders:  #set empty to pass security headers to downstream
+      path: /**  #others requests are forwarded to legacy service
+      url: https://example.com
+```
+
+
+
 [1]:https://engineering.opsgenie.com/comparing-api-gateway-performances-nginx-vs-zuul-vs-spring-cloud-gateway-vs-linered-b2cc59c65369
 [2]:https://github.com/Netflix/zuul/wiki
 [3]:https://blog.csdn.net/s573626822/article/details/83180567 
